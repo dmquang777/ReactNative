@@ -43,6 +43,7 @@ const Main = ({navigation}) => {
       if (index >= rating) {
         ratingStars.push(
           <Text
+            key={index}
             style={{
               fontSize: 8,
               fontWeight: '300',
@@ -52,10 +53,11 @@ const Main = ({navigation}) => {
           </Text>,
         );
       } else if (index > rating - 1 && index < rating) {
-        ratingStars.push(<SvgXml xml={xml} />);
+        ratingStars.push(<SvgXml xml={xml} key={index} />);
       } else {
         ratingStars.push(
           <Text
+            key={index}
             style={{
               fontSize: 8,
               fontWeight: '300',
@@ -165,7 +167,7 @@ const Main = ({navigation}) => {
             alignItems: 'center',
             paddingHorizontal: 8,
           }}>
-          <StarCard rating={Number(item?.rating?.rate ?? 0)} />
+          <StarCard rating={Number(item?.rating?.rate ?? 0)} key={item.id} />
         </View>
       </TouchableOpacity>
     );

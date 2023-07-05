@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import User from './screens/User';
-import Main from './screens/Home';
+import Profile from './screens/Profile';
+import Main from './screens/Main';
 import MyCart from './screens/MyCart';
 import ProductInfo from './screens/ProductInfo';
 
@@ -20,7 +20,7 @@ const MainStackNavigator = () => {
 const UserStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="User" component={User} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 };
